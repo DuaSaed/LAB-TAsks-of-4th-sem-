@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vehicle Info Result</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: #f4f4f4;
+            padding: 50px;
+            text-align: center;
+        }
+
+        .card {
+            background: white;
+            padding: 30px;
+            margin: auto;
+            border-radius: 12px;
+            max-width: 400px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        p {
+            font-size: 18px;
+            color: #555;
+            margin: 8px 0;
+        }
+
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            text-decoration: none;
+            background: #4facfe;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 8px;
+        }
+
+        a:hover {
+            background: #00f2fe;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        {% if info %}
+            <h2>Info for {{ brand }}</h2>
+            <p><strong>Origin:</strong> {{ info.origin }}</p>
+            <p><strong>Founded:</strong> {{ info.founded }}</p>
+            <p><strong>Popular Model:</strong> {{ info.popular_model }}</p>
+        {% else %}
+            <h2>{{ error }}</h2>
+        {% endif %}
+        <a href="/">Go Back</a>
+    </div>
+</body>
+</html>

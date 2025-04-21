@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vehicle Info App</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            height: 100vh;
+            background: linear-gradient(to right, #4facfe, #00f2fe);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #333;
+        }
+
+        .container {
+            background: #fff;
+            padding: 40px 30px;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            max-width: 450px;
+            width: 100%;
+            animation: slideIn 0.8s ease-out;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        h2 {
+            font-size: 28px;
+            margin-bottom: 25px;
+            color: #222;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 14px;
+            font-size: 16px;
+            border-radius: 10px;
+            border: 1px solid #ccc;
+            margin-bottom: 20px;
+            transition: 0.3s ease;
+        }
+
+        input[type="text"]:focus {
+            outline: none;
+            border-color: #00b4db;
+            box-shadow: 0 0 8px rgba(0, 180, 219, 0.3);
+        }
+
+        button {
+            padding: 14px 25px;
+            font-size: 16px;
+            background: linear-gradient(to right, #43e97b, #38f9d7);
+            border: none;
+            border-radius: 50px;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.4s ease;
+        }
+
+        button:hover {
+            background: linear-gradient(to right, #30cfd0, #330867);
+            color: #fff;
+            transform: scale(1.05);
+        }
+
+        footer {
+            margin-top: 25px;
+            font-size: 14px;
+            color: #666;
+        }
+
+        footer a {
+            color: #333;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer a:hover {
+            color: #00b4db;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Get Vehicle Info Instantly</h2>
+        <form method="POST">
+            <input type="text" name="brand" placeholder="e.g., Toyota, BMW, Honda" required>
+            <br>
+            <button type="submit">Search Vehicle Info</button>
+        </form>
+        <footer>
+            
+    </div>
+</body>
+</html>
