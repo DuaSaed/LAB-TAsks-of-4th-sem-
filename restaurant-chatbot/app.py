@@ -2,7 +2,7 @@ from flask import Flask, render_template, request, redirect, url_for
 
 app = Flask(__name__)
 
-# Dummy restaurant info
+
 restaurant_info = {
     "menu": "Our menu includes burgers, pizzas, pasta, salads, and desserts.",
     "hours": "We are open from 10 AM to 11 PM, Monday to Sunday.",
