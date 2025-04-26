@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Restaurant Chatbot - Welcome</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Poppins', sans-serif;
+            color: #ffffff;
+        }
+        .container {
+            background-color: rgba(30, 30, 30, 0.9);
+            padding: 40px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+        }
+        button {
+            background: #03dac6;
+            color: #000;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 30px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: background 0.3s;
+        }
+        button:hover {
+            background: #00c4b4;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🍽️ Welcome to Foodie's Paradise!</h1>
+        <p>Start chatting with our smart restaurant bot.</p>
+        <form action="/chat" method="post">
+            <input type="hidden" name="message" value="hello">
+            <button type="submit">Start Chat</button>
+        </form>
+    </div>
+</body>
+</html>
