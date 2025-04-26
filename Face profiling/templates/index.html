@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Face Profiling</title>
+    <style>
+        body {
+            background-color: #121212;
+            color: #e0e0e0;
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .upload-container {
+            background: #1e1e1e;
+            padding: 40px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 0 10px #00ffe5;
+        }
+        input[type="file"], input[type="submit"] {
+            margin: 20px 0;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 8px;
+            background-color: #00ffe5;
+            color: black;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #00ccaa;
+        }
+    </style>
+</head>
+<body>
+
+<div class="upload-container">
+    <h1>Upload Face Image</h1>
+    <form method="POST" enctype="multipart/form-data">
+        <input type="file" name="image" accept="image/*" required><br>
+        <input type="submit" value="Analyze Face">
+    </form>
+</div>
+
+</body>
+</html>

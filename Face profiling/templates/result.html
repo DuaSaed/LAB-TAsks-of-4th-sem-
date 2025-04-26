@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Face Measurements</title>
+    <style>
+        body {
+            background-color: #121212;
+            color: #e0e0e0;
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+            padding: 40px;
+        }
+        .results-container {
+            background: #1e1e1e;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 0 10px #00ffe5;
+        }
+        table {
+            width: 100%;
+            margin-top: 20px;
+            border-collapse: collapse;
+        }
+        td, th {
+            padding: 10px;
+            border: 1px solid #333;
+        }
+        img {
+            margin-top: 20px;
+            max-width: 400px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px #00ffe5;
+        }
+    </style>
+</head>
+<body>
+
+<div class="results-container">
+    <h1>Face Profiling Result</h1>
+    
+    {% if error %}
+        <p>{{ error }}</p>
+    {% else %}
+        <table>
+            <tr><th>Measurement</th><th>Value (pixels)</th></tr>
+            {% for key, value in measurements.items() %}
+                <tr>
+                    <td>{{ key }}</td>
+                    <td>{{ value|round(2) }}</td>
+                </tr>
+            {% endfor %}
+        </table>
+
+        <img src="{{ url_for('static', filename='uploads/' + image_path.split('/')[-1]) }}" alt="Processed Face Image">
+    {% endif %}
+
+</div>
+
+</body>
+</html>
