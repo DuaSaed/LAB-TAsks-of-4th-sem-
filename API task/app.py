@@ -14,7 +14,7 @@ vehicle_data = {
 @app.route("/", methods=["GET", "POST"])
 def home():
     if request.method == "POST":
-        brand = request.form["brand"].strip().lower()  # normalize input
+        brand = request.form["brand"].strip().lower()  
         info = vehicle_data.get(brand)
         if info:
             return render_template("result.html", brand=brand.title(), info=info)
