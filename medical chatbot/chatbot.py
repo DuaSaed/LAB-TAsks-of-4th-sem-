@@ -37,7 +37,7 @@ def index():
     if request.method == "POST":
         user_input = request.form["user_input"].lower()
 
-        # Loop through the response dictionary and check if the user input contains any of the keys
+      
         for key in responses:
             if key in user_input:
                 bot_response = responses[key]
