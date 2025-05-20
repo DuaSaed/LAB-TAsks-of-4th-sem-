@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Psychological Questionnaire</title>
+    <style>
+        body {
+            background-color: #121212;
+            color: #ffffff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            padding: 40px;
+        }
+
+        h1 {
+            color: #00bcd4;
+        }
+
+        form {
+            background-color: #1e1e1e;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 255, 255, 0.2);
+            max-width: 700px;
+            margin: auto;
+        }
+
+        label {
+            display: block;
+            margin: 20px 0 10px;
+            font-weight: bold;
+            color: #ffffff;
+        }
+
+        .question {
+            margin-bottom: 20px;
+        }
+
+        input[type="radio"] {
+            margin-right: 10px;
+        }
+
+        input[type="submit"] {
+            background-color: #00bcd4;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0097a7;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome, {{ patient_data['name'] }}</h1>
+    <form action="/chat" method="POST">
+
+        <div class="question">
+            <label>Do you often feel anxious or worried?</label>
+            <input type="radio" name="q1" value="Yes" required> Yes
+            <input type="radio" name="q1" value="No"> No
+        </div>
+
+        <div class="question">
+            <label>Do you have trouble sleeping or staying asleep?</label>
+            <input type="radio" name="q2" value="Often" required> Often
+            <input type="radio" name="q2" value="Sometimes"> Sometimes
+            <input type="radio" name="q2" value="Rarely"> Rarely
+        </div>
+
+        <div class="question">
+            <label>Do you experience mood swings or frequent sadness?</label>
+            <input type="radio" name="q3" value="Yes" required> Yes
+            <input type="radio" name="q3" value="No"> No
+        </div>
+
+        <div class="question">
+            <label>Do you find it hard to concentrate or stay focused?</label>
+            <input type="radio" name="q4" value="Yes" required> Yes
+            <input type="radio" name="q4" value="No"> No
+        </div>
+
+        <div class="question">
+            <label>Do you avoid social situations or feel uncomfortable in groups?</label>
+            <input type="radio" name="q5" value="Yes" required> Yes
+            <input type="radio" name="q5" value="No"> No
+        </div>
+
+        <input type="submit" value="Proceed to Chat">
+    </form>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Information</title>
+    <style>
+        body {
+            background-color: #1e1e2f; /* Dark background */
+            color: #f0f0f0; /* Light text */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        h1 {
+            color: #3498db; /* Cool blue for title */
+            margin-bottom: 30px;
+            font-size: 36px;
+        }
+
+        form {
+            background-color: #2b2b3d; /* Dark form background */
+            padding: 30px 40px;
+            border-radius: 12px;
+            box-shadow: 0 0 15px rgba(97, 218, 251, 0.2);
+            width: 300px;
+        }
+
+        label {
+            display: block;
+            margin: 15px 0 5px;
+            font-size: 0.95rem;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 6px;
+            background-color: #3c3c4f; /* Dark input background */
+            color: #f0f0f0;
+            font-size: 1rem;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            margin-top: 20px;
+            padding: 10px;
+            border: none;
+            border-radius: 6px;
+            background-color: #61dafb; /* Blue submit button */
+            color: #1e1e2f; /* Dark text color */
+            font-weight: bold;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #52c7e9; /* Lighter blue on hover */
+        }
+    </style>
+</head>
+<body>
+    <h1>Patient Information</h1>
+    <form action="/questionnaire" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" name="name" required>
+
+        <label for="age">Age:</label>
+        <input type="text" name="age" required>
+
+        <label for="gender">Gender:</label>
+        <input type="text" name="gender" required>
+
+        <input type="submit" value="Next">
+    </form>
+</body>
+</html>
